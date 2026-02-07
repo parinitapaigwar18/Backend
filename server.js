@@ -66,6 +66,9 @@ app.use(async (req, res, next) => {
 // Routes
 app.use("/", UserRoutes);
 app.use("/", ProductRoutes);
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
 
 // ❌ DO NOT use app.listen on Vercel
 export default app;
